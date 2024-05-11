@@ -1,0 +1,46 @@
+{
+  "routings": [
+    {
+      "path": "/",
+      "name": "main",
+      "component": "../views/Login.vue",
+      "meta": {
+        "icon": "HomeFilled",
+        "title": "首页",
+        "isLink": "",
+        "isHide": false,
+        "isFull": false,
+        "isAffix": true,
+        "isKeepAlive": true
+      }
+    },
+    {
+      "path": "/menu/form",
+      "name": "form",
+      "component": "../views/Form.vue",
+      "meta": {
+        "icon": "Setting",
+        "title": "数据集选项",
+        "isLink": "",
+        "isHide": false,
+        "isFull": true,
+        "isAffix": false,
+        "isKeepAlive": true
+      }
+    },
+    {
+      "path": "/menu/graph",
+      "name": "graph",
+      "component": "../views/Graph.vue",
+      "meta": {
+        "icon": "Share",
+        "title": "自定义拓扑",
+        "isLink": "",
+        "isHide": false,
+        "isFull": true,
+        "isAffix": false,
+        "isKeepAlive": true
+      }
+    }
+  ]
+}
