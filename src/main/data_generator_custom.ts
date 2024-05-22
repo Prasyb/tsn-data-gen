@@ -108,9 +108,9 @@ class DataGenerator {
     const topo = options.topo
     const profiles: DataGenProfile[] = []
     this.numStreamSpec = range(options.flowMin, options.flowMax, 1)
-    this.periodSpec = options.period.split(',').map(parseInt)
+    this.periodSpec = options.period.split(',').map((numStr) => parseInt(numStr))
     this.sizeSpec = range(options.sizeMin, options.sizeMax, 8)
-    this.ddlSpec = options.ddl.split(',').map(parseInt)
+    this.ddlSpec = options.ddl.split(',').map((numStr) => parseInt(numStr))
     for (const size of this.sizeSpec) {
       for (const period of this.periodSpec) {
         for (const ddl of this.ddlSpec) {

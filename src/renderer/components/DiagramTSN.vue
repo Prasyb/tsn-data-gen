@@ -60,7 +60,7 @@
                 <el-row class="button-group">
                   <el-button-group>
                     <el-button plain dark :color="diagramStyles.swStrokeColor" @click="myDiagram.addNode()">
-                      <el-icon><CirclePlus /></el-icon>路由器
+                      <el-icon><CirclePlus /></el-icon>交换机
                     </el-button>
                     <el-button plain dark :color="diagramStyles.esStrokeColor" @click="myDiagram.addNode(true)">
                       <el-icon><CirclePlus /></el-icon>端设备
@@ -1109,9 +1109,9 @@ class MyDiagram {
   //    This is used by listAllPaths.  The result is remembered in a global variable
   //    which is used by highlightSelectedPath.  This does not depend on findDistances.
 
+  // 此函数来自 gojs 官方示例 https://gojs.net/latest/samples/distances.html
   // Returns a Map of Nodes with distance values from the given source Node.
   // Assumes all links are directional.
-
   findDistances(source: go.Part): go.Map<go.Part, number> {
     const diagram = source.diagram
     // keep track of distances from the source node
@@ -1163,8 +1163,8 @@ class MyDiagram {
     return distances
   }
 
+  // 此函数来自 gojs 官方示例 https://gojs.net/latest/samples/distances.html
   // This helper function finds a Node in the given collection that has the smallest distance.
-
   leastNode(coll: go.Iterable<go.Part>, distances: go.Map<go.Part, number>) {
     let bestdist = Infinity
     let bestnode: go.Part | null = null
@@ -1180,9 +1180,9 @@ class MyDiagram {
     return bestnode
   }
 
+  // 此函数来自 gojs 官方示例 https://gojs.net/latest/samples/distances.html
   // Find a path that is shortest from the BEGIN node to the END node.
-  // (There might be more than one, and there might be none.)
-
+  // (There might be more than one, and there might be none.
   findShortestPath(begin: go.Node, end: go.Node | null): go.List<go.Node> {
     // compute and remember the distance of each node from the BEGIN node
     const distances = this.findDistances(begin)
